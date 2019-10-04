@@ -1,2 +1,8 @@
 image:
   file: .gitpod.dockerfile
+ports:
+  - port: 6080
+    onOpen: open-preview
+tasks:
+  - init: pip3 install pyglet pymunk vispy keras tensorflow pyqt5
+    command: cd chap02/ && python3 game_of_life.py
